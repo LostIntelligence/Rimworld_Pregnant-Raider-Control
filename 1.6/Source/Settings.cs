@@ -3,12 +3,17 @@ using Verse;
 
 namespace RaiderPregnancyControl
 {
+
     public class RPC_Settings : ModSettings
     {
-        public float pregnancyChance = 0.15f; // default 15%
-        public float fullPregnantRaidChance = 0.0f; // default 0%
-        public int minAge = 18; // default 18
-        public int maxAge = 40; // default 40
+        public const float DefaultPregnancyChance = 0.15f;
+        public const float DefaultFullRaidChance = 0f;
+        public const int DefaultMinAge = 18;
+        public const int DefaultMaxAge = 40;
+        public float pregnancyChance = DefaultPregnancyChance; // default 15%
+        public float fullPregnantRaidChance = DefaultFullRaidChance; // default 0%
+        public int minAge = DefaultMinAge; // default 18
+        public int maxAge = DefaultMaxAge; // default 40
 
         public override void ExposeData()
         {
@@ -40,8 +45,8 @@ namespace RaiderPregnancyControl
             list.Gap();
 
             // Module A
-            list.Label("RPC_MinAgeLabel".Translate() +settings.minAge);
-            settings.minAge = (int)list.Slider(settings.minAge,0,999);
+            list.Label("RPC_MinAgeLabel".Translate() + settings.minAge);
+            settings.minAge = (int)list.Slider(settings.minAge, 0, 999);
 
             list.Gap();
 
@@ -55,6 +60,15 @@ namespace RaiderPregnancyControl
             list.Label("RPC_FullPregnantRaidChanceLabel".Translate() + $" ({(settings.fullPregnantRaidChance * 100f):0}%)");
             settings.fullPregnantRaidChance = list.Slider(settings.fullPregnantRaidChance, 0f, 1f);
 
+            list.Gap();
+
+            if (list.ButtonText("Reset to Defaults"))
+            {
+                settings.pregnancyChance = RPC_Settings.DefaultPregnancyChance;
+                settings.fullPregnantRaidChance = RPC_Settings.DefaultFullRaidChance;
+                settings.minAge = RPC_Settings.DefaultMinAge;
+                settings.maxAge = RPC_Settings.DefaultMaxAge;
+            }
 
             list.End();
         }
