@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Pregnant Raider Control</name>
+	<author>LostIntelligence</author>
+	<url></url>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>lc.raiders.pregnant</packageId>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>Ludeon.RimWorld.Biotech</packageId>
+			<displayName>Biotech</displayName>
+			<downloadUrl>https://store.steampowered.com/app/1826140/RimWorld__Biotech/</downloadUrl>
+		</li>
+	</modDependencies>
+	<description>
+		Allows you to change the chance of a raider appearing pregnant, also includes a new raid type of only pregnant women in diffrent stages.
+	</description>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+	</loadAfter>
+</ModMetaData>

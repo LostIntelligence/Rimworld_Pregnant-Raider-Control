@@ -1,0 +1,6 @@
+<LanguageData>
+    <RPC_PregnancyChanceLabel>Chance a raider spawns pregnant</RPC_PregnancyChanceLabel>
+    <RPC_FullPregnantRaidChanceLabel>Chance of a fully pregnant female raid</RPC_FullPregnantRaidChanceLabel>
+    <RPC_MinAgeLabel>Min Age for Pregnant raiders: </RPC_MinAgeLabel>
+    <RPC_MaxAgeLabel>Max Age for Pregnant raiders: </RPC_MaxAgeLabel>
+</LanguageData>
