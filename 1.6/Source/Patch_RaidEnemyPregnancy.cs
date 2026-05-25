@@ -12,9 +12,11 @@ namespace RaiderPregnancyControl
         static void Prefix(IncidentParms parms)
         {
             PregnancyRaidState.Active = true;
-            parms.sendLetter = false;
-            PregnancyRaidState.ForceFemaleRaid =
-                Rand.Value < RPC_Mod.settings.fullPregnantRaidChance;
+            PregnancyRaidState.ForceFemaleRaid = Rand.Value < RPC_Mod.settings.fullPregnantRaidChance;
+            if (PregnancyRaidState.ForceFemaleRaid)
+            {
+                parms.sendLetter = false;
+            }
         }
 
         static void Postfix(bool __result, IncidentParms parms)
